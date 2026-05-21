@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Ανθία Σούφλα | Σύμβουλος Ψυχικής Υγείας - Ψυχοθεραπεύτρια Θεσσαλονίκη</title>
-    <meta name="description" content="Η Ανθία Σούφλα είναι αδειούχος Σύμβουλος Ψυχικής Υγείας και εκπαιδευόμενη Ψυχοθεραπεύτρια Συνθετικής Συστημικής προσέγγισης στη Θεσσαλονίκη.">
+    <meta name="description" content="Η Ανθία Σούφλα είναι Σύμβουλος Ψυχικής Υγείας και εκπαιδευόμενη Ψυχοθεραπεύτρια Συνθετικής Συστημικής προσέγγισης στη Θεσσαλονίκη.">
     
     <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/agelmet/SOUFLA/refs/heads/main/logogg.jpg" type="image/jpeg">
 
-    <!-- Fonts: Playfair Display (Serif) & Lato (Sans-serif) for high-end editorial look -->
+    <!-- Fonts: Playfair Display (Serif) & Lato (Sans-serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@
                         lux: {
                             base: '#f1ede7',    /* Calm light beige */
                             blush: '#eee0da',   /* Soft rose-beige */
-                            mocha: '#4b3d38',   /* Deep mocha brown */
-                            mochaLight: '#736159',
+                            mocha: '#7d665e',   /* NEW Main Accent Color */
+                            mochaLight: '#9a847c', /* Adjusted secondary text color for harmony */
                             white: '#ffffff',
                         }
                     },
@@ -40,9 +40,9 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     boxShadow: {
-                        'editorial': '0 20px 40px -10px rgba(75, 61, 56, 0.08)',
-                        'float': '0 30px 60px -15px rgba(75, 61, 56, 0.15)',
-                        'logo': '0 10px 25px -5px rgba(75, 61, 56, 0.2)',
+                        'editorial': '0 20px 40px -10px rgba(125, 102, 94, 0.1)',
+                        'float': '0 30px 60px -15px rgba(125, 102, 94, 0.15)',
+                        'logo': '0 10px 25px -5px rgba(125, 102, 94, 0.2)',
                     },
                     animation: {
                         'slow-pan': 'panImage 20s ease-in-out infinite alternate',
@@ -67,14 +67,14 @@
         /* Smooth Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1ede7; }
-        ::-webkit-scrollbar-thumb { background: #c2b4ae; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #4b3d38; }
+        ::-webkit-scrollbar-thumb { background: #9a847c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7d665e; }
 
-        body { background-color: #f1ede7; color: #4b3d38; }
+        body { background-color: #f1ede7; color: #7d665e; }
         
         /* Typography Polish */
         .text-balance { text-wrap: balance; }
-        .tracking-widest-extra { letter-spacing: 0.2em; }
+        .tracking-widest-extra { letter-spacing: 0.15em; }
 
         /* Reveal Animations */
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
@@ -92,23 +92,13 @@
 
         /* Hero Image Masking */
         .hero-mask {
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
         }
 
-        /* Roadmap Line */
-        .roadmap-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: rgba(75, 61, 56, 0.2);
-            transform: translateX(-50%);
-        }
-        @media (max-width: 768px) {
-            .roadmap-line::before { left: 24px; transform: none; }
+        /* Mosaic Pattern Background */
+        .bg-mosaic {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H20v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2z' fill='%237d665e' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
 
         /* Lightbox styling */
@@ -138,7 +128,7 @@
                 <div class="hidden lg:flex items-center space-x-10">
                     <a href="#about" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">Η ΘΕΡΑΠΕΥΤΡΙΑ</a>
                     <a href="#services" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
-                    <a href="#roadmap" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">ΠΡΟΣΕΓΓΙΣΗ</a>
+                    <a href="#philosophy" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">ΠΡΟΣΕΓΓΙΣΗ</a>
                     <a href="#space" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">ΧΩΡΟΣ</a>
                     <a href="#reviews" class="text-xs uppercase tracking-widest-extra font-bold text-lux-mocha hover:text-lux-mochaLight transition-colors">ΕΜΠΕΙΡΙΕΣ</a>
                     <a href="#contact" class="px-8 py-3 bg-lux-mocha text-lux-base rounded-full text-xs uppercase tracking-widest-extra font-bold hover:bg-lux-mochaLight shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
@@ -157,7 +147,7 @@
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-lux-base/95 backdrop-blur-xl shadow-xl hidden flex-col items-center py-10 space-y-8 border-t border-lux-blush">
             <a href="#about" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">Η ΘΕΡΑΠΕΥΤΡΙΑ</a>
             <a href="#services" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
-            <a href="#roadmap" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">ΠΡΟΣΕΓΓΙΣΗ</a>
+            <a href="#philosophy" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">ΠΡΟΣΕΓΓΙΣΗ</a>
             <a href="#space" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">ΧΩΡΟΣ</a>
             <a href="#reviews" class="text-sm uppercase tracking-widest-extra font-bold text-lux-mocha mobile-link">ΕΜΠΕΙΡΙΕΣ</a>
             <a href="#contact" class="px-8 py-4 bg-lux-mocha text-lux-base rounded-full text-sm uppercase tracking-widest-extra font-bold mobile-link">Κλειστε Ραντεβου</a>
@@ -165,27 +155,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-lux-base">
+    <section class="relative min-h-screen flex items-center justify-center pt-32 overflow-hidden bg-lux-base">
         <!-- Background Image Layer with Gradient Fade -->
         <div class="absolute inset-0 z-0 h-[85vh] hero-mask">
-            <div class="w-full h-full bg-cover bg-center bg-no-repeat opacity-60 animate-slow-pan" style="background-image: url('https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true');"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-lux-base/30 via-lux-base/60 to-lux-base"></div>
+            <div class="w-full h-full bg-cover bg-center bg-no-repeat opacity-40 animate-slow-pan" style="background-image: url('https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-lux-base/40 via-lux-base/70 to-lux-base"></div>
         </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center mt-10">
             <div class="reveal">
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-lux-mocha leading-tight mb-6 text-balance drop-shadow-md">
-                    Συνθετική Συστημική Θεραπεία.
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif text-lux-mocha leading-[1.2] mb-8 text-balance drop-shadow-sm">
+                    «Μέχρι να φωτιστεί αυτό που μένει μέσα μας αθέατο, θα συνεχίζει να καθορίζει τη ζωή και τις σχέσεις μας.»
                 </h1>
-                <p class="text-lg md:text-2xl text-lux-mochaLight font-light mb-12 max-w-2xl mx-auto tracking-wide text-balance">
-                    Αγκαλιάζοντας όλο το «Σύστημα» της Ζωής σας. Ένα ασφαλές καταφύγιο για την εσωτερική σας γαλήνη.
+                <h2 class="text-xl md:text-2xl text-lux-mocha font-bold mb-6 max-w-3xl mx-auto tracking-wide text-balance">
+                    Συνθετική Συστημική Ψυχοθεραπεία — μια ολιστική προσέγγιση που βλέπει τον άνθρωπο μέσα στο πλήρες «σύστημά» του: προσωπικές εμπειρίες, σχέσεις και εσωτερικές διεργασίες.
+                </h2>
+                <p class="text-base md:text-lg text-lux-mochaLight font-light mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Ένας ασφαλής θεραπευτικός χώρος για κατανόηση, επεξεργασία του τραύματος και ανάπτυξη εσωτερικής γαλήνης, μέσα από μια αυθεντική θεραπευτική σχέση εμπιστοσύνης, όπου το άγχος και οι δυσκολίες μπορούν να αποκτήσουν νόημα και να μετασχηματιστούν.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <a href="#contact" class="px-10 py-5 bg-lux-mocha text-lux-base rounded-full text-sm uppercase tracking-widest-extra font-bold hover:bg-lux-mochaLight hover:shadow-float transition-all duration-500 transform hover:-translate-y-1">
                         Κλειστε Ραντεβου
                     </a>
-                    <a href="#about" class="px-10 py-5 bg-transparent border border-lux-mocha text-lux-mocha rounded-full text-sm uppercase tracking-widest-extra font-bold hover:bg-lux-mocha hover:text-lux-base transition-all duration-500">
+                    <a href="#philosophy" class="px-10 py-5 bg-transparent border border-lux-mocha text-lux-mocha rounded-full text-sm uppercase tracking-widest-extra font-bold hover:bg-lux-mocha hover:text-lux-base transition-all duration-500">
                         Γνωριστε την προσεγγιση
                     </a>
                 </div>
@@ -197,10 +190,10 @@
     <section id="about" class="py-32 px-6 relative bg-lux-base">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
             <div class="lg:col-span-5 relative reveal">
-                <div class="aspect-[3/4] rounded-t-full rounded-b-[3rem] overflow-hidden shadow-float relative z-10 border-8 border-lux-blush">
+                <div class="aspect-[3/4] rounded-t-full rounded-b-[3rem] overflow-hidden shadow-float relative z-10 border-8 border-lux-blush bg-white">
                     <img src="https://raw.githubusercontent.com/agelmet/SOUFLA/refs/heads/main/1000046186.jpg" 
                          alt="Ανθία Σούφλα - Ψυχοθεραπεύτρια" 
-                         class="w-full h-full object-cover animate-slow-pan">
+                         class="w-full h-full object-cover animate-slow-pan mix-blend-multiply">
                 </div>
                 <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-lux-blush rounded-full blur-3xl z-0"></div>
             </div>
@@ -210,13 +203,14 @@
                 <h2 class="text-4xl md:text-5xl font-serif text-lux-mocha mb-8">Ανθία Σούφλα</h2>
                 <div class="space-y-6 text-lg text-lux-mochaLight font-light leading-relaxed">
                     <p>
-                        Η Ανθία Σούφλα είναι αδειούχος Σύμβουλος Ψυχικής Υγείας και εκπαιδευόμενη Ψυχοθεραπεύτρια Συνθετικής Συστημικής προσέγγισης, διατηρώντας το ιδιωτικό της γραφείο στη Θεσσαλονίκη. Το εκπαιδευτικό της υπόβαθρο διακρίνεται για τον συνδυασμό διεθνών προτύπων και εξειδίκευσης στην παιδική και εφηβική ηλικία.
+                        Η Ανθία Σούφλα είναι Σύμβουλος Ψυχικής Υγείας και εκπαιδευόμενη Ψυχοθεραπεύτρια Συνθετικής Συστημικής προσέγγισης, διατηρώντας το ιδιωτικό της γραφείο στη Θεσσαλονίκη.
                     </p>
                     <p>
-                        Έχει ολοκληρώσει το Higher Professional Diploma (HPD) στη Συμβουλευτική και Ψυχολογία (Mediterranean College, σε συνεργασία με το βρετανικό University of Derby), καθώς και το μονοετές πρόγραμμα Σχολικής Ψυχολογίας από το Πανεπιστήμιο Αιγαίου. Σήμερα, εμβαθύνει την κλινική της πρακτική ολοκληρώνοντας την 4ετή εξειδίκευσή της στο Κέντρο Συνθετικής Συστημικής Θεραπείας Θεσσαλονίκης.
+                        Το εκπαιδευτικό της υπόβαθρο στηρίζει μια ολιστική κατανόηση του ανθρώπου, με έμφαση στο ευρύτερο πλαίσιο των σχέσεων, των ζευγαριών και της οικογενειακής δυναμικής. Έχει ολοκληρώσει το Higher Professional Diploma (HPD) στη Συμβουλευτική και Ψυχολογία (Mediterranean College, σε συνεργασία με το βρετανικό University of Derby), καθώς και το μονοετές πρόγραμμα Σχολικής Ψυχολογίας από το Πανεπιστήμιο Αιγαίου. Σήμερα, εμβαθύνει την κλινική της πρακτική ολοκληρώνοντας την 4ετή εξειδίκευσή της στο Κέντρο Συνθετικής Συστημικής Θεραπείας Θεσσαλονίκης.
                     </p>
                     <p>
-                        Εκείνο όμως που την κάνει να ξεχωρίζει ως επαγγελματία, είναι η αυθεντική της γείωση στις πραγματικές ανάγκες των ανθρώπων. Έχει εργαστεί στην "πρώτη γραμμή" της ψυχοκοινωνικής υποστήριξης, σε φορείς όπως το Κέντρο Ημέρας Connect Family, το «Σπίτι της ΑΡΣΙΣ» και η ΑμΚΕ ΙΑΣΙΣ. Με την αναγνώριση και την εμπιστοσύνη των θεραπευόμενών της, παρέχει υπηρεσίες σε ενήλικες, εφήβους, ζευγάρια και οικογένειες, δημιουργώντας ένα ζεστό, μη-επικριτικό καταφύγιο.
+                        Εκείνο όμως που την κάνει να ξεχωρίζει ως επαγγελματία, είναι η αυθεντική της γείωση στις πραγματικές ανάγκες των ανθρώπων. Έχει εργαστεί εθελοντικά στην "πρώτη γραμμή" της ψυχοκοινωνικής υποστήριξης, σε φορείς όπως το Κέντρο Ημέρας Connect Family, το «Σπίτι της ΑΡΣΙΣ», η ΑμΚΕ ΙΑΣΙΣ και η Θετική Φωνή. Με την αναγνώριση και την εμπιστοσύνη των θεραπευόμενών της, παρέχει υπηρεσίες σε ενήλικες, εφήβους, ζευγάρια και οικογένειες, δημιουργώντας ένα ζεστό, μη-επικριτικό καταφύγιο. 
+                        <br><span class="text-sm italic opacity-80 mt-2 block">(Παρακολούθηση πολλαπλών επιμορφωτικών σεμιναρίων).</span>
                     </p>
                 </div>
             </div>
@@ -224,7 +218,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 px-6 bg-lux-blush/30 relative">
+    <section id="services" class="py-32 px-6 bg-lux-blush/40 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <span class="text-xs uppercase tracking-widest-extra font-bold text-lux-mochaLight mb-4 block">Εξειδικευμενες Υπηρεσιες</span>
@@ -234,104 +228,127 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Service 1 -->
-                <div class="glass-panel p-10 md:p-14 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal group">
+                <div class="glass-panel p-10 md:p-12 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal group flex flex-col h-full">
                     <h3 class="text-2xl font-serif text-lux-mocha mb-4 group-hover:text-lux-mochaLight transition-colors">Διαχείριση Άγχους, OCD, Φοβιών & Ψυχοσωματικών</h3>
-                    <p class="text-lux-mochaLight font-light leading-relaxed mb-6">
-                        Το έντονο στρες, οι ιδεοψυχαναγκασμοί (OCD) και οι κρίσεις πανικού συχνά σωματοποιούνται, προκαλώντας εξάντληση. Αντλώντας εργαλεία από πολλές διαφορετικές προσεγγίσεις, σχεδιάζουμε ένα θεραπευτικό πλάνο κομμένο και ραμμένο στα μέτρα σας.
+                    <p class="text-lux-mochaLight font-light leading-relaxed mb-8 flex-grow">
+                        Το έντονο στρες, οι ιδεοψυχαναγκασμοί (OCD) και οι κρίσεις πανικού συχνά σωματοποιούνται, οδηγώντας σε ψυχική και σωματική εξάντληση. Με εργαλεία από διαφορετικές θεραπευτικές προσεγγίσεις, διαμορφώνεται ένα θεραπευτικό πλάνο προσαρμοσμένο σε εσάς — και σε αυτό που πραγματικά χρειάζεστε για να νιώσετε ξανά σταθερότητα και ηρεμία.
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Ενηλικες 60'</span>
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Κρισεις Πανικου</span>
+                    <div class="flex flex-wrap items-center gap-3 mt-auto pt-6 border-t border-lux-mocha/10">
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Ενηλικες</span>
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Αγχος / Πανικος</span>
+                        <span class="px-4 py-1.5 bg-lux-mocha text-white text-xs uppercase tracking-wider rounded-full font-bold shadow-md ml-auto">60'</span>
                     </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="glass-panel p-10 md:p-14 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal reveal-delay-1 group">
+                <div class="glass-panel p-10 md:p-12 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal reveal-delay-1 group flex flex-col h-full">
                     <h3 class="text-2xl font-serif text-lux-mocha mb-4 group-hover:text-lux-mochaLight transition-colors">Συμβουλευτική Εφήβων, Οικογένειας & Ζεύγους</h3>
-                    <p class="text-lux-mochaLight font-light leading-relaxed mb-6">
-                        Η Συστημική προσέγγιση μας βοηθά να δούμε πώς επικοινωνείτε με τον σύντροφο ή το παιδί σας. Δουλεύουμε στην οριοθέτηση, τη διαχείριση του εφηβικού θυμού και την αποκατάσταση της λειτουργικότητας στο σπίτι.
+                    <p class="text-lux-mochaLight font-light leading-relaxed mb-8 flex-grow">
+                        Μέσα από τη συστημική ματιά, εστιάζουμε στον τρόπο που σχετίζονται και επικοινωνούν τα μέλη της οικογένειας και το ζευγάρι. Στόχος είναι η κατανόηση των αναγκών πίσω από τη συμπεριφορά, η ενίσχυση της επικοινωνίας και η υγιής οριοθέτηση που επιτρέπουν περισσότερη ασφάλεια, σεβασμό και σύνδεση μέσα στην οικογένεια.
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Εφηβοι 60'</span>
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Οικογενεια & Ζευγος</span>
+                    <div class="flex flex-wrap items-center gap-3 mt-auto pt-6 border-t border-lux-mocha/10">
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Εφηβοι / Οικογενεια</span>
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Συστημικη</span>
+                        <span class="px-4 py-1.5 bg-lux-mocha text-white text-xs uppercase tracking-wider rounded-full font-bold shadow-md ml-auto">60'</span>
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="glass-panel p-10 md:p-14 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal group">
+                <div class="glass-panel p-10 md:p-12 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal group flex flex-col h-full">
                     <h3 class="text-2xl font-serif text-lux-mocha mb-4 group-hover:text-lux-mochaLight transition-colors">Διαχείριση Πένθους & Ενδυνάμωση</h3>
-                    <p class="text-lux-mochaLight font-light leading-relaxed mb-6">
-                        Οι μεταβάσεις της ζωής απαιτούν έναν ασφαλή χώρο για να βιωθούν. Σας υποστηρίζω ώστε να πενθήσετε ό,τι χάθηκε, να επαναπροσδιορίσετε την αξία σας και να χτίσετε μια αυθεντική και δυνατή αυτοεικόνα, χωρίς τον φόβο της κριτικής.
+                    <p class="text-lux-mochaLight font-light leading-relaxed mb-8 flex-grow">
+                        Οι μεταβάσεις της ζωής χρειάζονται έναν ασφαλή χώρο για να βιωθούν. Το πένθος δεν έχει μία μορφή — είναι μια βαθιά προσωπική διαδικασία. Σε αυτό το πλαίσιο, δημιουργείται χώρος για την επεξεργασία της απώλειας, τον επαναπροσδιορισμό της προσωπικής ταυτότητας και την ενδυνάμωση μιας πιο αυθεντικής και σταθερής σχέσης με τον εαυτό.
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Αυτοεκτιμηση 60'</span>
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Πενθος</span>
+                    <div class="flex flex-wrap items-center gap-3 mt-auto pt-6 border-t border-lux-mocha/10">
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Αυτοεκτιμηση</span>
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Πενθος</span>
+                        <span class="px-4 py-1.5 bg-lux-mocha text-white text-xs uppercase tracking-wider rounded-full font-bold shadow-md ml-auto">60'</span>
                     </div>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="glass-panel p-10 md:p-14 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal reveal-delay-1 group">
+                <div class="glass-panel p-10 md:p-12 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal reveal-delay-1 group flex flex-col h-full">
                     <h3 class="text-2xl font-serif text-lux-mocha mb-4 group-hover:text-lux-mochaLight transition-colors">Διαδικτυακή Ψυχοθεραπεία (Online)</h3>
-                    <p class="text-lux-mochaLight font-light leading-relaxed mb-6">
-                        Για ανθρώπους που βρίσκονται μακριά ή έχουν περιορισμένο χρόνο, παρέχονται διαδικτυακές συνεδρίες μέσω βιντεοκλήσης (60'). Παράλληλα, παρέχεται ειδικό προνομιακό κόστος για φοιτητές. Η ψυχική υγεία είναι δικαίωμα.
+                    <p class="text-lux-mochaLight font-light leading-relaxed mb-8 flex-grow">
+                        Για ανθρώπους που βρίσκονται μακριά ή έχουν περιορισμένο χρόνο, παρέχονται διαδικτυακές συνεδρίες μέσω βιντεοκλήσης. Παράλληλα, παρέχεται ειδικό προνομιακό κόστος για φοιτητές. Η φροντίδα της ψυχικής υγείας οφείλει να είναι προσβάσιμη σε όλους.
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Online 60'</span>
-                        <span class="px-3 py-1 bg-lux-base border border-lux-blush text-lux-mocha text-xs uppercase tracking-wider rounded-full">Ειδικο Κοστος Φοιτητων</span>
+                    <div class="flex flex-wrap items-center gap-3 mt-auto pt-6 border-t border-lux-mocha/10">
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Online</span>
+                        <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Φοιτητες / Ανεργοι</span>
+                        <span class="px-4 py-1.5 bg-lux-mocha text-white text-xs uppercase tracking-wider rounded-full font-bold shadow-md ml-auto">60'</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roadmap Section (4 Promises) -->
-    <section id="roadmap" class="py-32 px-6 bg-lux-base relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20 reveal">
-                <span class="text-xs uppercase tracking-widest-extra font-bold text-lux-mochaLight mb-4 block">Ο Ανθρωπος ως Ψηφιδωτο</span>
-                <h2 class="text-4xl md:text-5xl font-serif text-lux-mocha mb-6">4 Υποσχέσεις πριν την Πρώτη μας Συνεδρία</h2>
-                <p class="text-lux-mochaLight font-light text-lg">Η επιλογή θεραπευτή είναι μια διαδικασία που απαιτεί θάρρος. Ως θεραπεύτρια, σας δίνω 4 ξεκάθαρες υποσχέσεις για το τι θα συναντήσετε στο γραφείο μου.</p>
+    <!-- Philosophy Section (Mosaic) -->
+    <section id="philosophy" class="py-32 px-6 bg-lux-base relative bg-mosaic">
+        <!-- Subtle gradient overlay to soften the mosaic background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-lux-base/90 to-transparent z-0"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start relative z-10">
+            <!-- Mosaic Visual Presentation -->
+            <div class="relative reveal lg:sticky lg:top-32">
+                <!-- Decorative Graphic "Tiles" -->
+                <div class="absolute -top-8 -left-8 w-40 h-40 bg-lux-blush/80 rounded-tl-3xl z-0 backdrop-blur-md border border-white/50"></div>
+                <div class="absolute top-1/2 -right-6 w-32 h-32 bg-lux-mocha/10 rounded-br-3xl z-0 backdrop-blur-md border border-white/50 transform -translate-y-1/2"></div>
+                <div class="absolute -bottom-10 left-10 w-48 h-48 bg-lux-blush/60 rounded-bl-3xl z-0 backdrop-blur-md border border-white/50"></div>
+                
+                <img src="https://raw.githubusercontent.com/agelmet/SOUFLA/refs/heads/main/Picture%201.png" 
+                     class="relative z-10 w-full h-auto rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl shadow-float object-cover border-4 border-white" 
+                     alt="Ο Άνθρωπος ως Ψηφιδωτό">
             </div>
 
-            <div class="relative roadmap-line space-y-16">
-                <!-- Promise 1 -->
-                <div class="relative flex flex-col md:flex-row items-center justify-between group reveal">
-                    <div class="md:w-[45%] text-left md:text-right pr-0 md:pr-12 mb-6 md:mb-0 ml-16 md:ml-0">
-                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">1. Δεν θα προσπαθήσω να σας στριμώξω σε μια «Θεωρία»</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">Πιστεύω βαθιά πως δεν υπάρχει μία μέθοδος που να ταιριάζει σε όλους. Εσείς είστε το κέντρο. Δανείζομαι τα καλύτερα εργαλεία από τις κορυφαίες προσεγγίσεις για να "ράψω" τη θεραπεία στα δικά σας μέτρα.</p>
+            <!-- Content Presentation -->
+            <div class="reveal reveal-delay-1">
+                <span class="text-xs uppercase tracking-widest-extra font-bold text-lux-mochaLight mb-3 block">Η οπτική πίσω από τη θεραπευτική συνάντηση</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-mocha mb-4">Ο Άνθρωπος ως Ψηφιδωτό</h2>
+                <h3 class="text-xl md:text-2xl font-serif text-lux-mocha/80 mb-8 italic">4 Υποσχέσεις πριν την Πρώτη μας Συνεδρία</h3>
+                
+                <p class="text-lg text-lux-mochaLight font-light leading-relaxed mb-12">
+                    Η επιλογή θεραπευτικού χώρου είναι μια πράξη εμπιστοσύνης και θάρρους. Στη θεραπευτική διαδικασία, η εστίαση παραμένει πάντα στον άνθρωπο που βρίσκεται απέναντι — και στον τρόπο που βλέπει, νιώθει και κατανοεί τη ζωή του.
+                </p>
+
+                <div class="space-y-10">
+                    <!-- Pillar 1 -->
+                    <div class="pl-6 border-l-2 border-lux-mocha/20">
+                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Το ψηφιδωτό δεν χρειάζεται να «διορθωθεί»</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">
+                            Δεν υπάρχει ένας σωστός τρόπος να είναι ένας άνθρωπος. Κάθε κομμάτι φωτίζεται ως προς τη θέση και τη σημασία του, ακόμη κι όταν μοιάζει δύσκολο ή αντιφατικό.
+                        </p>
                     </div>
-                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rounded-full ring-8 ring-lux-base z-10 group-hover:scale-150 transition-transform duration-300"></div>
-                    <div class="md:w-[45%] hidden md:block"></div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pl-6 border-l-2 border-lux-mocha/20">
+                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Η εικόνα αναδύεται, δεν επιβάλλεται</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">
+                            Στη θεραπεία δεν δίνονται έτοιμες εικόνες. Το άτομο υποστηρίζεται ώστε να αρχίσει να βλέπει το δικό του ψηφιδωτό πιο καθαρά στα πλαίσια στα οποία ανήκει, με μεγαλύτερη επίγνωση και κατανόηση. Η αλλαγή είναι μια διαδικασία. Δεν είναι, αλλά συμβαίνει.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pl-6 border-l-2 border-lux-mocha/20">
+                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Αποδοχή μέσα από την εμπειρία</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">
+                            Η επαφή με διαφορετικά θεραπευτικά πλαίσια και ανθρώπινες συνθήκες έχει ενισχύσει μια στάση βαθιάς αποδοχής προς κάθε ανθρώπινη εμπειρία. Κάθε κομμάτι του ψηφιδωτού αντιμετωπίζεται με σεβασμό και ουσιαστική παρουσία, ανεξάρτητα από το πώς ή γιατί δημιουργήθηκε.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="pl-6 border-l-2 border-lux-mocha/20">
+                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Η Θεραπεία είναι Δικαίωμα, όχι Πολυτέλεια</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">
+                            Δίνεται ιδιαίτερη προσοχή σε ανθρώπους που βρίσκονται σε περιόδους ευαλωτότητας ή μετάβασης, με στόχο έναν ασφαλή και μη επικριτικό θεραπευτικό χώρο. Υπάρχει ειδική, προσιτή τιμολογιακή πολιτική για τους φοιτητές και ανέργους. Κάθε άνθρωπος είναι αναγκαίο να έχει τον χώρο και τη βοήθεια να παλέψει για την ψυχή του.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Promise 2 -->
-                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group reveal">
-                    <div class="md:w-[45%] text-left pl-0 md:pl-12 mb-6 md:mb-0 ml-16 md:ml-0">
-                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">2. Δεν είστε το «πρόβλημά» σας</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">Δεν θα σας αντιμετωπίσω ως ένα απομονωμένο άτομο. Στη Συστημική προσέγγιση, κοιτάμε τη μεγάλη εικόνα. Ανακαλύπτουμε μαζί τους αόρατους "κρίκους" που σας ενώνουν με το περιβάλλον σας.</p>
-                    </div>
-                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rounded-full ring-8 ring-lux-base z-10 group-hover:scale-150 transition-transform duration-300"></div>
-                    <div class="md:w-[45%] hidden md:block"></div>
-                </div>
-
-                <!-- Promise 3 -->
-                <div class="relative flex flex-col md:flex-row items-center justify-between group reveal">
-                    <div class="md:w-[45%] text-left md:text-right pr-0 md:pr-12 mb-6 md:mb-0 ml-16 md:ml-0">
-                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">3. Έχω "γειωθεί" στις πιο δύσκολες πλευρές της ζωής</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">Έχοντας εργαστεί στην «ΑΡΣΙΣ» και στο «Connect Family», έχω σταθεί δίπλα σε εφήβους σε κίνδυνο και οικογένειες υπό κατάρρευση. Δεν τρομάζω εύκολα. Παραμένω δίπλα σας, ψύχραιμη και απόλυτα παρούσα.</p>
-                    </div>
-                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rounded-full ring-8 ring-lux-base z-10 group-hover:scale-150 transition-transform duration-300"></div>
-                    <div class="md:w-[45%] hidden md:block"></div>
-                </div>
-
-                <!-- Promise 4 -->
-                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group reveal">
-                    <div class="md:w-[45%] text-left pl-0 md:pl-12 ml-16 md:ml-0">
-                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">4. Η Θεραπεία είναι Δικαίωμα, όχι Πολυτέλεια</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">Προερχόμενη από τον χώρο των ΜΚΟ, διατηρώ ειδική, προσιτή τιμολογιακή πολιτική για τους φοιτητές. Κάθε νέος άνθρωπος πρέπει να έχει τον χώρο και τη βοήθεια να παλέψει για την ψυχή του.</p>
-                    </div>
-                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rounded-full ring-8 ring-lux-base z-10 group-hover:scale-150 transition-transform duration-300"></div>
-                    <div class="md:w-[45%] hidden md:block"></div>
+                <!-- Closing Text Box -->
+                <div class="mt-12 p-8 bg-lux-blush/60 rounded-3xl border border-white shadow-sm">
+                    <p class="text-lux-mocha italic font-serif text-lg md:text-xl leading-relaxed text-center">
+                        «Το ψηφιδωτό δεν χρειάζεται να ολοκληρωθεί για να έχει αξία. Αρκεί ο χώρος όπου τα κομμάτια αρχίζουν να συναντιούνται με ρυθμό, ασφάλεια και παρουσία, ενώ μέσα στη θεραπευτική στάση επιτρέπεται μια δημιουργική "ασέβεια" προς τις σταθερές αναπαραστάσεις, ώστε να αναδύονται νέοι τρόποι κατανόησης του ίδιου ψηφιδωτού.»
+                    </p>
                 </div>
             </div>
         </div>
@@ -347,14 +364,14 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <button class="w-full rounded-2xl overflow-hidden group relative reveal" onclick="openLightbox('https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true" alt="Χώρος Γραφείου 1" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                <button class="w-full rounded-2xl overflow-hidden group relative reveal bg-white" onclick="openLightbox('https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/SOUFLA/blob/main/1000045183.jpg?raw=true" alt="Χώρος Γραφείου 1" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700 mix-blend-multiply">
                     <div class="absolute inset-0 bg-lux-mocha/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <i data-lucide="zoom-in" class="w-10 h-10 text-white"></i>
                     </div>
                 </button>
-                <button class="w-full rounded-2xl overflow-hidden group relative reveal reveal-delay-1" onclick="openLightbox('https://github.com/agelmet/SOUFLA/blob/main/1000045185.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/SOUFLA/blob/main/1000045185.jpg?raw=true" alt="Χώρος Γραφείου 2" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                <button class="w-full rounded-2xl overflow-hidden group relative reveal reveal-delay-1 bg-white" onclick="openLightbox('https://github.com/agelmet/SOUFLA/blob/main/1000045185.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/SOUFLA/blob/main/1000045185.jpg?raw=true" alt="Χώρος Γραφείου 2" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700 mix-blend-multiply">
                     <div class="absolute inset-0 bg-lux-mocha/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <i data-lucide="zoom-in" class="w-10 h-10 text-white"></i>
                     </div>
@@ -430,7 +447,6 @@
                 <div class="lg:col-span-3 reveal reveal-delay-2">
                     <h4 class="text-sm uppercase tracking-widest-extra font-bold text-white mb-8 border-b border-lux-blush/20 pb-4">Συνδεθειτε</h4>
                     <div class="flex gap-4">
-                        <!-- True Colors on a clean white circular background -->
                         <a href="https://www.facebook.com/anthia.soufla/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-transform duration-300">
                             <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/icons8-facebook-480.png" alt="Facebook" class="w-7 h-7 object-contain">
                         </a>
