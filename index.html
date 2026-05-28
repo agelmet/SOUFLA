@@ -30,8 +30,8 @@
                         lux: {
                             base: '#f1ede7',    /* Calm light beige */
                             blush: '#eee0da',   /* Soft rose-beige */
-                            mocha: '#7d665e',   /* NEW Main Accent Color */
-                            mochaLight: '#9a847c', /* Adjusted secondary text color for harmony */
+                            mocha: '#7d665e',   /* Main Accent Color */
+                            mochaLight: '#9a847c', /* Secondary text color */
                             white: '#ffffff',
                         }
                     },
@@ -98,7 +98,22 @@
 
         /* Mosaic Pattern Background */
         .bg-mosaic {
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H20v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2z' fill='%237d665e' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v-2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H20v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2h-2v-2h-2v2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2v-2H0v-2h2z' fill='%237d665e' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        /* Roadmap/Zigzag Line */
+        .roadmap-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(125, 102, 94, 0.2);
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .roadmap-line::before { left: 24px; transform: none; }
         }
 
         /* Lightbox styling */
@@ -164,13 +179,14 @@
 
         <div class="relative z-10 max-w-6xl mx-auto px-6 text-center mt-10">
             <div class="reveal">
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif text-lux-mocha leading-[1.2] mb-8 text-balance drop-shadow-sm">
+                <!-- Typography Adjusted: Smaller, more elegant sizing -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif text-lux-mocha leading-tight mb-8 text-balance drop-shadow-sm">
                     «Μέχρι να φωτιστεί αυτό που μένει μέσα μας αθέατο, θα συνεχίζει να καθορίζει τη ζωή και τις σχέσεις μας.»
                 </h1>
-                <h2 class="text-xl md:text-2xl text-lux-mocha font-bold mb-6 max-w-3xl mx-auto tracking-wide text-balance">
+                <h2 class="text-lg md:text-xl text-lux-mocha font-bold mb-6 max-w-3xl mx-auto tracking-wide text-balance">
                     Συνθετική Συστημική Ψυχοθεραπεία — μια ολιστική προσέγγιση που βλέπει τον άνθρωπο μέσα στο πλήρες «σύστημά» του: προσωπικές εμπειρίες, σχέσεις και εσωτερικές διεργασίες.
                 </h2>
-                <p class="text-base md:text-lg text-lux-mochaLight font-light mb-12 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-base md:text-lg text-lux-mochaLight font-light mb-12 max-w-3xl mx-auto leading-relaxed text-balance">
                     Ένας ασφαλής θεραπευτικός χώρος για κατανόηση, επεξεργασία του τραύματος και ανάπτυξη εσωτερικής γαλήνης, μέσα από μια αυθεντική θεραπευτική σχέση εμπιστοσύνης, όπου το άγχος και οι δυσκολίες μπορούν να αποκτήσουν νόημα και να μετασχηματιστούν.
                 </p>
                 
@@ -209,8 +225,7 @@
                         Το εκπαιδευτικό της υπόβαθρο στηρίζει μια ολιστική κατανόηση του ανθρώπου, με έμφαση στο ευρύτερο πλαίσιο των σχέσεων, των ζευγαριών και της οικογενειακής δυναμικής. Έχει ολοκληρώσει το Higher Professional Diploma (HPD) στη Συμβουλευτική και Ψυχολογία (Mediterranean College, σε συνεργασία με το βρετανικό University of Derby), καθώς και το μονοετές πρόγραμμα Σχολικής Ψυχολογίας από το Πανεπιστήμιο Αιγαίου. Σήμερα, εμβαθύνει την κλινική της πρακτική ολοκληρώνοντας την 4ετή εξειδίκευσή της στο Κέντρο Συνθετικής Συστημικής Θεραπείας Θεσσαλονίκης.
                     </p>
                     <p>
-                        Εκείνο όμως που την κάνει να ξεχωρίζει ως επαγγελματία, είναι η αυθεντική της γείωση στις πραγματικές ανάγκες των ανθρώπων. Έχει εργαστεί εθελοντικά στην "πρώτη γραμμή" της ψυχοκοινωνικής υποστήριξης, σε φορείς όπως το Κέντρο Ημέρας Connect Family, το «Σπίτι της ΑΡΣΙΣ», η ΑμΚΕ ΙΑΣΙΣ και η Θετική Φωνή. Με την αναγνώριση και την εμπιστοσύνη των θεραπευόμενών της, παρέχει υπηρεσίες σε ενήλικες, εφήβους, ζευγάρια και οικογένειες, δημιουργώντας ένα ζεστό, μη-επικριτικό καταφύγιο. 
-                        <br><span class="text-sm italic opacity-80 mt-2 block">(Παρακολούθηση πολλαπλών επιμορφωτικών σεμιναρίων).</span>
+                        Εκείνο όμως που την κάνει να ξεχωρίζει ως επαγγελματία, είναι η αυθεντική της γείωση στις πραγματικές ανάγκες των ανθρώπων. Έχει εργαστεί εθελοντικά στην "πρώτη γραμμή" της ψυχοκοινωνικής υποστήριξης, σε φορείς όπως το Κέντρο Ημέρας Connect Family, το «Σπίτι της ΑΡΣΙΣ», η ΑμΚΕ ΙΑΣΙΣ και η Θετική Φωνή. Με την αναγνώριση και την εμπιστοσύνη των θεραπευόμενών της, παρέχει υπηρεσίες σε ενήλικες, εφήβους, ζευγάρια και οικογένειες, δημιουργώντας ένα ζεστό, μη-επικριτικό καταφύγιο. Παράλληλα, φροντίζει για τη διαρκή επιστημονική της εξέλιξη μέσα από τη συστηματική παρακολούθηση εξειδικευμένων επιμορφωτικών σεμιναρίων.
                     </p>
                 </div>
             </div>
@@ -257,7 +272,7 @@
                 <div class="glass-panel p-10 md:p-12 rounded-3xl hover:shadow-editorial transition-all duration-500 reveal group flex flex-col h-full">
                     <h3 class="text-2xl font-serif text-lux-mocha mb-4 group-hover:text-lux-mochaLight transition-colors">Διαχείριση Πένθους & Ενδυνάμωση</h3>
                     <p class="text-lux-mochaLight font-light leading-relaxed mb-8 flex-grow">
-                        Οι μεταβάσεις της ζωής χρειάζονται έναν ασφαλή χώρο για να βιωθούν. Το πένθος δεν έχει μία μορφή — είναι μια βαθιά προσωπική διαδικασία. Σε αυτό το πλαίσιο, δημιουργείται χώρος για την επεξεργασία της απώλειας, τον επαναπροσδιορισμό της προσωπικής ταυτότητας και την ενδυνάμωση μιας πιο αυθεντικής και σταθερής σχέσης με τον εαυτό.
+                        Οι μεταβάσεις της ζωής χρειάζονται έναν ασφαλή χώρο για να βιωθούν. Το πένθος δεν έχει μία μορφή — είναι μια βαθιά προσωπική διαδικασία, που το κάθε άτομο βιώνει με τον δικό του ρυθμό και τρόπο. Σε αυτό το πλαίσιο, δημιουργείται χώρος για την επεξεργασία της απώλειας, τον επαναπροσδιορισμό της προσωπικής ταυτότητας και την ενδυνάμωση μιας πιο αυθεντικής και σταθερής σχέσης με τον εαυτό.
                     </p>
                     <div class="flex flex-wrap items-center gap-3 mt-auto pt-6 border-t border-lux-mocha/10">
                         <span class="px-4 py-1.5 bg-white/60 border border-lux-mocha/20 text-lux-mocha text-xs uppercase tracking-wider rounded-full shadow-sm">Αυτοεκτιμηση</span>
@@ -282,75 +297,93 @@
         </div>
     </section>
 
-    <!-- Philosophy Section (Mosaic) -->
+    <!-- Philosophy Section (Mosaic & ZigZag Roadmap) -->
     <section id="philosophy" class="py-32 px-6 bg-lux-base relative bg-mosaic">
         <!-- Subtle gradient overlay to soften the mosaic background -->
         <div class="absolute inset-0 bg-gradient-to-br from-lux-base/90 to-transparent z-0"></div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start relative z-10">
-            <!-- Mosaic Visual Presentation -->
-            <div class="relative reveal lg:sticky lg:top-32">
-                <!-- Decorative Graphic "Tiles" -->
-                <div class="absolute -top-8 -left-8 w-40 h-40 bg-lux-blush/80 rounded-tl-3xl z-0 backdrop-blur-md border border-white/50"></div>
-                <div class="absolute top-1/2 -right-6 w-32 h-32 bg-lux-mocha/10 rounded-br-3xl z-0 backdrop-blur-md border border-white/50 transform -translate-y-1/2"></div>
-                <div class="absolute -bottom-10 left-10 w-48 h-48 bg-lux-blush/60 rounded-bl-3xl z-0 backdrop-blur-md border border-white/50"></div>
-                
-                <img src="https://raw.githubusercontent.com/agelmet/SOUFLA/refs/heads/main/Picture%201.png" 
-                     class="relative z-10 w-full h-auto rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl shadow-float object-cover border-4 border-white" 
-                     alt="Ο Άνθρωπος ως Ψηφιδωτό">
-            </div>
-
-            <!-- Content Presentation -->
-            <div class="reveal reveal-delay-1">
-                <span class="text-xs uppercase tracking-widest-extra font-bold text-lux-mochaLight mb-3 block">Η οπτική πίσω από τη θεραπευτική συνάντηση</span>
-                <h2 class="text-4xl md:text-5xl font-serif text-lux-mocha mb-4">Ο Άνθρωπος ως Ψηφιδωτό</h2>
-                <h3 class="text-xl md:text-2xl font-serif text-lux-mocha/80 mb-8 italic">4 Υποσχέσεις πριν την Πρώτη μας Συνεδρία</h3>
-                
-                <p class="text-lg text-lux-mochaLight font-light leading-relaxed mb-12">
-                    Η επιλογή θεραπευτικού χώρου είναι μια πράξη εμπιστοσύνης και θάρρους. Στη θεραπευτική διαδικασία, η εστίαση παραμένει πάντα στον άνθρωπο που βρίσκεται απέναντι — και στον τρόπο που βλέπει, νιώθει και κατανοεί τη ζωή του.
-                </p>
-
-                <div class="space-y-10">
-                    <!-- Pillar 1 -->
-                    <div class="pl-6 border-l-2 border-lux-mocha/20">
-                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Το ψηφιδωτό δεν χρειάζεται να «διορθωθεί»</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">
-                            Δεν υπάρχει ένας σωστός τρόπος να είναι ένας άνθρωπος. Κάθε κομμάτι φωτίζεται ως προς τη θέση και τη σημασία του, ακόμη κι όταν μοιάζει δύσκολο ή αντιφατικό.
-                        </p>
-                    </div>
-
-                    <!-- Pillar 2 -->
-                    <div class="pl-6 border-l-2 border-lux-mocha/20">
-                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Η εικόνα αναδύεται, δεν επιβάλλεται</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">
-                            Στη θεραπεία δεν δίνονται έτοιμες εικόνες. Το άτομο υποστηρίζεται ώστε να αρχίσει να βλέπει το δικό του ψηφιδωτό πιο καθαρά στα πλαίσια στα οποία ανήκει, με μεγαλύτερη επίγνωση και κατανόηση. Η αλλαγή είναι μια διαδικασία. Δεν είναι, αλλά συμβαίνει.
-                        </p>
-                    </div>
-
-                    <!-- Pillar 3 -->
-                    <div class="pl-6 border-l-2 border-lux-mocha/20">
-                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Αποδοχή μέσα από την εμπειρία</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">
-                            Η επαφή με διαφορετικά θεραπευτικά πλαίσια και ανθρώπινες συνθήκες έχει ενισχύσει μια στάση βαθιάς αποδοχής προς κάθε ανθρώπινη εμπειρία. Κάθε κομμάτι του ψηφιδωτού αντιμετωπίζεται με σεβασμό και ουσιαστική παρουσία, ανεξάρτητα από το πώς ή γιατί δημιουργήθηκε.
-                        </p>
-                    </div>
-
-                    <!-- Pillar 4 -->
-                    <div class="pl-6 border-l-2 border-lux-mocha/20">
-                        <h4 class="text-xl font-bold text-lux-mocha mb-2">Η Θεραπεία είναι Δικαίωμα, όχι Πολυτέλεια</h4>
-                        <p class="text-lux-mochaLight font-light leading-relaxed">
-                            Δίνεται ιδιαίτερη προσοχή σε ανθρώπους που βρίσκονται σε περιόδους ευαλωτότητας ή μετάβασης, με στόχο έναν ασφαλή και μη επικριτικό θεραπευτικό χώρο. Υπάρχει ειδική, προσιτή τιμολογιακή πολιτική για τους φοιτητές και ανέργους. Κάθε άνθρωπος είναι αναγκαίο να έχει τον χώρο και τη βοήθεια να παλέψει για την ψυχή του.
-                        </p>
-                    </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            
+            <!-- Top Intro Area: Image & Text -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Mosaic Visual Presentation -->
+                <div class="relative reveal">
+                    <!-- Decorative Graphic "Tiles" -->
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-lux-blush/80 rounded-tl-3xl z-0 backdrop-blur-md border border-white/50"></div>
+                    <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-lux-mocha/10 rounded-br-3xl z-0 backdrop-blur-md border border-white/50"></div>
+                    
+                    <img src="https://raw.githubusercontent.com/agelmet/SOUFLA/refs/heads/main/Picture%201.png" 
+                         class="relative z-10 w-full h-auto rounded-xl shadow-float object-cover border-4 border-white" 
+                         alt="Ο Άνθρωπος ως Ψηφιδωτό">
                 </div>
 
-                <!-- Closing Text Box -->
-                <div class="mt-12 p-8 bg-lux-blush/60 rounded-3xl border border-white shadow-sm">
-                    <p class="text-lux-mocha italic font-serif text-lg md:text-xl leading-relaxed text-center">
-                        «Το ψηφιδωτό δεν χρειάζεται να ολοκληρωθεί για να έχει αξία. Αρκεί ο χώρος όπου τα κομμάτια αρχίζουν να συναντιούνται με ρυθμό, ασφάλεια και παρουσία, ενώ μέσα στη θεραπευτική στάση επιτρέπεται μια δημιουργική "ασέβεια" προς τις σταθερές αναπαραστάσεις, ώστε να αναδύονται νέοι τρόποι κατανόησης του ίδιου ψηφιδωτού.»
+                <!-- Intro Text -->
+                <div class="reveal reveal-delay-1">
+                    <span class="text-xs uppercase tracking-widest-extra font-bold text-lux-mochaLight mb-3 block">Η οπτική πίσω από τη θεραπευτική συνάντηση</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-lux-mocha mb-4">Ο Άνθρωπος ως Ψηφιδωτό</h2>
+                    <h3 class="text-xl md:text-2xl font-serif text-lux-mocha/80 mb-8 italic">4 Υποσχέσεις πριν την Πρώτη μας Συνεδρία</h3>
+                    
+                    <p class="text-lg text-lux-mochaLight font-light leading-relaxed">
+                        Η επιλογή θεραπευτικού χώρου είναι μια πράξη εμπιστοσύνης και θάρρους. Στη θεραπευτική διαδικασία, η εστίαση παραμένει πάντα στον άνθρωπο που βρίσκεται απέναντι — και στον τρόπο που βλέπει, νιώθει και κατανοεί τη ζωή του.
                     </p>
                 </div>
             </div>
+
+            <!-- Zigzag Roadmap (The 4 Promises) -->
+            <div class="relative roadmap-line space-y-16 max-w-5xl mx-auto">
+                
+                <!-- Promise 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group reveal">
+                    <div class="md:w-[45%] text-left md:text-right pr-0 md:pr-12 mb-6 md:mb-0 ml-16 md:ml-0">
+                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">Το ψηφιδωτό δεν χρειάζεται να «διορθωθεί»</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">Δεν υπάρχει ένας σωστός τρόπος να είναι ένας άνθρωπος. Κάθε κομμάτι φωτίζεται ως προς τη θέση και τη σημασία του, ακόμη κι όταν μοιάζει δύσκολο ή αντιφατικό.</p>
+                    </div>
+                    <!-- Diamond Icon -->
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rotate-45 ring-8 ring-lux-base z-10 group-hover:scale-125 transition-transform duration-300 shadow-sm"></div>
+                    <div class="md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Promise 2 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group reveal">
+                    <div class="md:w-[45%] text-left pl-0 md:pl-12 mb-6 md:mb-0 ml-16 md:ml-0">
+                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">Η εικόνα αναδύεται, δεν επιβάλλεται</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">Στη θεραπεία δεν δίνονται έτοιμες εικόνες. Το άτομο υποστηρίζεται ώστε να αρχίσει να βλέπει το δικό του ψηφιδωτό πιο καθαρά στα πλαίσια στα οποία ανήκει, με μεγαλύτερη επίγνωση και κατανόηση. Η αλλαγή είναι μια διαδικασία. Δεν είναι, αλλά συμβαίνει.</p>
+                    </div>
+                    <!-- Diamond Icon -->
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rotate-45 ring-8 ring-lux-base z-10 group-hover:scale-125 transition-transform duration-300 shadow-sm"></div>
+                    <div class="md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Promise 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group reveal">
+                    <div class="md:w-[45%] text-left md:text-right pr-0 md:pr-12 mb-6 md:mb-0 ml-16 md:ml-0">
+                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">Αποδοχή μέσα από την εμπειρία</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">Η επαφή με διαφορετικά θεραπευτικά πλαίσια και ανθρώπινες συνθήκες έχει ενισχύσει μια στάση βαθιάς αποδοχής προς κάθε ανθρώπινη εμπειρία. Κάθε κομμάτι του ψηφιδωτού αντιμετωπίζεται με σεβασμό και ουσιαστική παρουσία, ανεξάρτητα από το πώς ή γιατί δημιουργήθηκε.</p>
+                    </div>
+                    <!-- Diamond Icon -->
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rotate-45 ring-8 ring-lux-base z-10 group-hover:scale-125 transition-transform duration-300 shadow-sm"></div>
+                    <div class="md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Promise 4 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group reveal">
+                    <div class="md:w-[45%] text-left pl-0 md:pl-12 ml-16 md:ml-0">
+                        <h4 class="text-2xl font-serif text-lux-mocha mb-3">Η Θεραπεία είναι Δικαίωμα, όχι Πολυτέλεια</h4>
+                        <p class="text-lux-mochaLight font-light leading-relaxed">Δίνεται ιδιαίτερη προσοχή σε ανθρώπους που βρίσκονται σε περιόδους ευαλωτότητας ή μετάβασης, με στόχο έναν ασφαλή και μη επικριτικό θεραπευτικό χώρο. Υπάρχει ειδική, προσιτή τιμολογιακή πολιτική για φοιτητές και ανέργους. Κάθε άνθρωπος είναι αναγκαίο να έχει τον χώρο και τη βοήθεια να παλέψει για την ψυχή του.</p>
+                    </div>
+                    <!-- Diamond Icon -->
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lux-mocha rotate-45 ring-8 ring-lux-base z-10 group-hover:scale-125 transition-transform duration-300 shadow-sm"></div>
+                    <div class="md:w-[45%] hidden md:block"></div>
+                </div>
+            </div>
+
+            <!-- Closing Text Box -->
+            <div class="mt-20 max-w-4xl mx-auto p-10 bg-lux-blush/60 rounded-3xl border border-white shadow-sm reveal">
+                <p class="text-lux-mocha italic font-serif text-lg md:text-xl leading-relaxed text-center">
+                    «Το ψηφιδωτό δεν χρειάζεται να ολοκληρωθεί για να έχει αξία. Αρκεί ο χώρος όπου τα κομμάτια αρχίζουν να συναντιούνται με ρυθμό, ασφάλεια και παρουσία, ενώ μέσα στη θεραπευτική στάση επιτρέπεται μια δημιουργική "ασέβεια" προς τις σταθερές αναπαραστάσεις, ώστε να αναδύονται νέοι τρόποι κατανόησης του ίδιου ψηφιδωτού.»
+                </p>
+            </div>
+            
         </div>
     </section>
 
