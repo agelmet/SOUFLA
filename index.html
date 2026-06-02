@@ -304,93 +304,124 @@
 
         <div class="max-w-7xl mx-auto relative z-10">
             
-            <!-- Top Intro Area: Image & Text -->
+            <!-- Top Intro Area: Custom Graphic & Text -->
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
                 
                 <!-- Custom SVG Mosaic Graphic -->
                 <div class="relative reveal flex items-center justify-center">
-                    <svg viewBox="0 0 500 500" class="relative z-10 w-full max-w-md lg:max-w-lg mx-auto h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 550 500" class="relative z-10 w-full max-w-md lg:max-w-lg mx-auto h-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <mask id="tile-mask">
-                                <rect x="-250" y="-250" width="500" height="500" fill="black" />
-                                <!-- Concentric dashed circles to form tiles -->
-                                <circle cx="0" cy="0" r="16" stroke="white" stroke-width="12" stroke-dasharray="6 3" fill="none" />
-                                <circle cx="0" cy="0" r="30" stroke="white" stroke-width="12" stroke-dasharray="10 3" fill="none" />
-                                <circle cx="0" cy="0" r="44" stroke="white" stroke-width="12" stroke-dasharray="14 3" fill="none" />
-                                <circle cx="0" cy="0" r="58" stroke="white" stroke-width="12" stroke-dasharray="16 3" fill="none" />
-                                <circle cx="0" cy="0" r="72" stroke="white" stroke-width="12" stroke-dasharray="18 3" fill="none" />
-                                <circle cx="0" cy="0" r="86" stroke="white" stroke-width="12" stroke-dasharray="20 3" fill="none" />
-                                <circle cx="0" cy="0" r="100" stroke="white" stroke-width="12" stroke-dasharray="22 3" fill="none" />
-                                <circle cx="0" cy="0" r="114" stroke="white" stroke-width="12" stroke-dasharray="24 3" fill="none" />
-                                <circle cx="0" cy="0" r="128" stroke="white" stroke-width="12" stroke-dasharray="26 3" fill="none" />
-                                <circle cx="0" cy="0" r="142" stroke="white" stroke-width="12" stroke-dasharray="28 4" fill="none" />
-                                <circle cx="0" cy="0" r="156" stroke="white" stroke-width="12" stroke-dasharray="30 4" fill="none" />
-                                <circle cx="0" cy="0" r="170" stroke="white" stroke-width="12" stroke-dasharray="32 4" fill="none" />
-                                <circle cx="0" cy="0" r="184" stroke="white" stroke-width="12" stroke-dasharray="34 4" fill="none" />
+                                <rect x="-300" y="-300" width="600" height="600" fill="black" />
+                                <g clip-path="url(#broken-edge)">
+                                    <!-- Concentric tile rings mapped perfectly to create the mosaic texture -->
+                                    <circle r="10" stroke="white" stroke-width="8.5" stroke-dasharray="6 2" fill="none" transform="rotate(15)" />
+                                    <circle r="20" stroke="white" stroke-width="8.5" stroke-dasharray="7 2" fill="none" transform="rotate(45)" />
+                                    <circle r="30" stroke="white" stroke-width="8.5" stroke-dasharray="8 2" fill="none" transform="rotate(72)" />
+                                    <circle r="40" stroke="white" stroke-width="8.5" stroke-dasharray="8.5 2" fill="none" transform="rotate(11)" />
+                                    <circle r="50" stroke="white" stroke-width="8.5" stroke-dasharray="9 2" fill="none" transform="rotate(99)" />
+                                    <circle r="60" stroke="white" stroke-width="8.5" stroke-dasharray="8 2.5" fill="none" transform="rotate(33)" />
+                                    <circle r="70" stroke="white" stroke-width="8.5" stroke-dasharray="8.5 2.2" fill="none" transform="rotate(110)" />
+                                    <circle r="80" stroke="white" stroke-width="8.5" stroke-dasharray="8 2.1" fill="none" transform="rotate(8)" />
+                                    <circle r="90" stroke="white" stroke-width="8.5" stroke-dasharray="8.2 2" fill="none" transform="rotate(64)" />
+                                    <circle r="100" stroke="white" stroke-width="8.5" stroke-dasharray="7.8 2.2" fill="none" transform="rotate(140)" />
+                                    <circle r="110" stroke="white" stroke-width="8.5" stroke-dasharray="8 2" fill="none" transform="rotate(27)" />
+                                    <circle r="120" stroke="white" stroke-width="8.5" stroke-dasharray="8.5 2.5" fill="none" transform="rotate(81)" />
+                                    <circle r="130" stroke="white" stroke-width="8.5" stroke-dasharray="8.2 2.1" fill="none" transform="rotate(105)" />
+                                    <circle r="140" stroke="white" stroke-width="8.5" stroke-dasharray="8 2.3" fill="none" transform="rotate(5)" />
+                                    <circle r="150" stroke="white" stroke-width="8.5" stroke-dasharray="8.6 2" fill="none" transform="rotate(49)" />
+                                    <circle r="160" stroke="white" stroke-width="8.5" stroke-dasharray="8 2.4" fill="none" transform="rotate(113)" />
+                                    <circle r="170" stroke="white" stroke-width="8.5" stroke-dasharray="8.3 2" fill="none" transform="rotate(88)" />
+                                    <circle r="180" stroke="white" stroke-width="8.5" stroke-dasharray="8 2.2" fill="none" transform="rotate(17)" />
+                                    <circle r="190" stroke="white" stroke-width="8.5" stroke-dasharray="8.5 2.1" fill="none" transform="rotate(77)" />
+                                    <circle r="200" stroke="white" stroke-width="8.5" stroke-dasharray="8 2" fill="none" transform="rotate(121)" />
+                                    <circle r="210" stroke="white" stroke-width="8.5" stroke-dasharray="8.4 2.3" fill="none" transform="rotate(40)" />
+                                    <circle r="220" stroke="white" stroke-width="8.5" stroke-dasharray="8 2" fill="none" transform="rotate(95)" />
+                                </g>
                             </mask>
-
+                            
+                            <!-- The jagged right edge simulation -->
                             <clipPath id="broken-edge">
-                                <!-- Maintains a mostly solid circle, lightly broken on the right -->
-                                <path d="M 0 -200
-                                         A 200 200 0 0 0 0 200
-                                         A 200 200 0 0 0 120 160
-                                         L 140 180 L 160 140 L 130 110 L 170 70 L 140 30 L 180 -10 L 150 -50 L 170 -90 L 130 -130 L 150 -170 L 110 -185
-                                         A 200 200 0 0 0 0 -200 Z" />
+                                <path d="M 0 -230 A 230 230 0 0 0 0 230 
+                                         L 15 220 L 5 195 L 45 185 L 20 155 L 75 140 L 55 110 L 95 90 L 65 60 L 135 30 
+                                         L 100 0 L 145 -30 L 95 -60 L 120 -90 L 75 -120 L 85 -150 L 40 -180 L 15 -205 Z" />
                             </clipPath>
 
                             <filter id="tile-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                                <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#4b3d38" flood-opacity="0.2" />
+                                <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#4b3d38" flood-opacity="0.25" />
                             </filter>
                         </defs>
 
-                        <!-- Base background circle to give it a solid canvas backing behind the tiles -->
-                        <circle cx="220" cy="250" r="195" fill="#f1ede7" filter="url(#tile-shadow)"/>
+                        <!-- Subtle backing to give the mosaic a base -->
+                        <circle cx="230" cy="250" r="225" fill="#e8ddd3" opacity="0.6" filter="url(#tile-shadow)" />
 
-                        <g transform="translate(220, 250)">
-                            <g clip-path="url(#broken-edge)" mask="url(#tile-mask)">
-                                <!-- Base Color (Ochre/Mustard) -->
-                                <rect x="-200" y="-200" width="400" height="400" fill="#e8ac65" />
-
-                                <!-- Organic blobs/sectors for multi-color effect -->
-                                <path d="M 0 0 L 200 -50 A 200 200 0 0 1 100 200 Z" fill="#d37748" /> <!-- Terracotta -->
-                                <path d="M 0 0 L 100 200 A 200 200 0 0 1 -150 150 Z" fill="#5f877c" /> <!-- Teal/Sage -->
-                                <path d="M 0 0 L -150 150 A 200 200 0 0 1 -180 -100 Z" fill="#4f6d85" /> <!-- Slate Blue -->
-                                <path d="M 0 0 L -180 -100 A 200 200 0 0 1 50 -200 Z" fill="#7a6c81" /> <!-- Muted Mauve -->
-                                <path d="M 0 0 L 50 -200 A 200 200 0 0 1 200 -50 Z" fill="#a3b182" /> <!-- Olive -->
+                        <!-- Core Mosaic Body -->
+                        <g transform="translate(230, 250)" filter="url(#tile-shadow)">
+                            <g mask="url(#tile-mask)">
+                                <!-- Base Gold/Ochre Background -->
+                                <rect x="-250" y="-250" width="500" height="500" fill="#d8a45c" />
                                 
-                                <!-- Overlapping circles to mix up the strict pie-chart look -->
-                                <circle cx="80" cy="80" r="70" fill="#e8ac65" />
-                                <circle cx="-60" cy="100" r="60" fill="#a3b182" />
-                                <circle cx="-90" cy="-60" r="80" fill="#d37748" />
-                                <circle cx="60" cy="-100" r="70" fill="#4f6d85" />
-                                <circle cx="0" cy="0" r="40" fill="#8f7b72" /> <!-- Warm Taupe center -->
+                                <!-- Distinct organic color wedges (Teal, Blue, Mauve, Terracotta) -->
+                                <path d="M 0 0 L -250 -50 A 250 250 0 0 0 -250 -180 Z" fill="#496275" />
+                                <path d="M 0 0 L -250 -180 A 250 250 0 0 0 -150 -250 Z" fill="#dfcdb1" />
+                                <path d="M 0 0 L -250 100 A 250 250 0 0 0 -250 -50 Z" fill="#648d82" />
+                                <path d="M 0 0 L -100 250 A 250 250 0 0 0 -250 100 Z" fill="#7b6b7f" />
+                                <path d="M 0 0 L 50 250 A 250 250 0 0 0 -100 250 Z" fill="#b96b48" />
+                                
+                                <!-- Inner rings layering -->
+                                <circle cx="0" cy="0" r="110" fill="#d8a45c" />
+                                <path d="M 0 0 L -110 -20 A 110 110 0 0 0 -70 -85 Z" fill="#496275" />
+                                <path d="M 0 0 L -110 50 A 110 110 0 0 0 -110 -20 Z" fill="#648d82" />
+                                <path d="M 0 0 L -30 110 A 110 110 0 0 0 -110 50 Z" fill="#b96b48" />
                             </g>
 
-                            <!-- Scattered Tiles (Subtle, less pieces missing) -->
-                            <g filter="url(#tile-shadow)">
-                                <rect x="175" y="10" width="11" height="11" rx="2" fill="#e8ac65" transform="rotate(12 175 10)" />
-                                <rect x="195" y="35" width="10" height="10" rx="2" fill="#d37748" transform="rotate(25 195 35)" />
-                                <rect x="165" y="55" width="12" height="12" rx="2" fill="#4f6d85" transform="rotate(-15 165 55)" />
-                                <rect x="210" y="75" width="9" height="9" rx="2" fill="#5f877c" transform="rotate(40 210 75)" />
-                                <rect x="185" y="105" width="11" height="11" rx="2" fill="#a3b182" transform="rotate(18 185 105)" />
-                                <rect x="155" y="135" width="12" height="12" rx="2" fill="#7a6c81" transform="rotate(-8 155 135)" />
-                                <rect x="205" y="155" width="10" height="10" rx="2" fill="#e8ac65" transform="rotate(32 205 155)" />
-                                <rect x="145" y="185" width="11" height="11" rx="2" fill="#d37748" transform="rotate(-22 145 185)" />
-
-                                <rect x="170" y="-20" width="12" height="12" rx="2" fill="#5f877c" transform="rotate(-10 170 -20)" />
-                                <rect x="200" y="-45" width="10" height="10" rx="2" fill="#7a6c81" transform="rotate(15 200 -45)" />
-                                <rect x="160" y="-75" width="11" height="11" rx="2" fill="#e8ac65" transform="rotate(-25 160 -75)" />
-                                <rect x="190" y="-95" width="10" height="10" rx="2" fill="#a3b182" transform="rotate(8 190 -95)" />
-                                <rect x="150" y="-125" width="12" height="12" rx="2" fill="#d37748" transform="rotate(-18 150 -125)" />
-                                <rect x="185" y="-155" width="9" height="9" rx="2" fill="#4f6d85" transform="rotate(28 185 -155)" />
-                                <rect x="140" y="-185" width="11" height="11" rx="2" fill="#5f877c" transform="rotate(-35 140 -185)" />
-
-                                <rect x="235" y="-10" width="9" height="9" rx="2" fill="#d37748" transform="rotate(45 235 -10)" />
-                                <rect x="225" y="-70" width="10" height="10" rx="2" fill="#e8ac65" transform="rotate(-12 225 -70)" />
-                                <rect x="245" y="50" width="8" height="8" rx="2" fill="#7a6c81" transform="rotate(30 245 50)" />
-                                <rect x="230" y="120" width="10" height="10" rx="2" fill="#4f6d85" transform="rotate(-20 230 120)" />
-                                <rect x="195" y="195" width="9" height="9" rx="2" fill="#a3b182" transform="rotate(10 195 195)" />
-                            </g>
+                            <!-- Scattered Exploding Tiles -->
+                            <rect x="25" y="200" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(12 29 204)" />
+                            <rect x="45" y="190" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(42 49 194)" />
+                            <rect x="15" y="160" width="8" height="8" rx="1" fill="#b96b48" transform="rotate(7 19 164)" />
+                            <rect x="35" y="145" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(25 39 149)" />
+                            <rect x="80" y="130" width="8" height="8" rx="1" fill="#648d82" transform="rotate(55 84 134)" />
+                            <rect x="55" y="115" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(18 59 119)" />
+                            <rect x="100" y="100" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(64 104 104)" />
+                            <rect x="75" y="80" width="8" height="8" rx="1" fill="#b96b48" transform="rotate(33 79 84)" />
+                            <rect x="125" y="70" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(12 129 74)" />
+                            <rect x="150" y="45" width="8" height="8" rx="1" fill="#496275" transform="rotate(77 154 49)" />
+                            <rect x="90" y="55" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(29 94 59)" />
+                            <rect x="115" y="25" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(41 119 29)" />
+                            <rect x="160" y="15" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(16 164 19)" />
+                            <rect x="180" y="-10" width="8" height="8" rx="1" fill="#7b6b7f" transform="rotate(84 184 -6)" />
+                            <rect x="135" y="-15" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(52 139 -11)" />
+                            <rect x="155" y="-45" width="8" height="8" rx="1" fill="#b96b48" transform="rotate(27 159 -41)" />
+                            <rect x="105" y="-35" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(63 109 -31)" />
+                            <rect x="120" y="-65" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(11 124 -61)" />
+                            <rect x="80" y="-85" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(38 84 -81)" />
+                            <rect x="140" y="-95" width="8" height="8" rx="1" fill="#648d82" transform="rotate(74 144 -91)" />
+                            <rect x="100" y="-115" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(22 104 -111)" />
+                            <rect x="65" y="-135" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(56 69 -131)" />
+                            <rect x="110" y="-145" width="8" height="8" rx="1" fill="#b96b48" transform="rotate(14 114 -141)" />
+                            <rect x="85" y="-165" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(47 89 -161)" />
+                            <rect x="50" y="-185" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(31 54 -181)" />
+                            <rect x="35" y="-210" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(68 39 -206)" />
+                            <!-- Outer scattered tiles -->
+                            <rect x="220" y="10" width="7" height="7" rx="1" fill="#d8a45c" transform="rotate(15 223 13)" />
+                            <rect x="250" y="-30" width="6" height="6" rx="1" fill="#7b6b7f" transform="rotate(45 253 -27)" />
+                            <rect x="190" y="60" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(72 194 64)" />
+                            <rect x="210" y="-80" width="8" height="8" rx="1" fill="#b96b48" transform="rotate(23 214 -76)" />
+                            <rect x="260" y="40" width="6" height="6" rx="1" fill="#d8a45c" transform="rotate(66 263 43)" />
+                            <rect x="180" y="110" width="7" height="7" rx="1" fill="#d8a45c" transform="rotate(12 183 113)" />
+                            <rect x="140" y="160" width="8" height="8" rx="1" fill="#648d82" transform="rotate(51 144 164)" />
+                            <rect x="230" y="140" width="6" height="6" rx="1" fill="#d8a45c" transform="rotate(88 233 143)" />
+                            <rect x="170" y="-130" width="8" height="8" rx="1" fill="#dfcdb1" transform="rotate(34 174 -126)" />
+                            <rect x="130" y="-170" width="7" height="7" rx="1" fill="#d8a45c" transform="rotate(71 133 -166)" />
+                            <rect x="200" y="-180" width="6" height="6" rx="1" fill="#b96b48" transform="rotate(25 203 -177)" />
+                            <rect x="80" y="190" width="8" height="8" rx="1" fill="#d8a45c" transform="rotate(19 84 194)" />
+                            <rect x="110" y="210" width="6" height="6" rx="1" fill="#496275" transform="rotate(58 113 213)" />
+                            <rect x="210" y="200" width="7" height="7" rx="1" fill="#d8a45c" transform="rotate(82 213 203)" />
+                            <rect x="280" y="-10" width="5" height="5" rx="1" fill="#d8a45c" transform="rotate(33 282 -7)" />
+                            <rect x="270" y="-100" width="6" height="6" rx="1" fill="#dfcdb1" transform="rotate(61 273 -97)" />
+                            <rect x="290" y="80" width="6" height="6" rx="1" fill="#b96b48" transform="rotate(14 293 83)" />
+                            <rect x="250" y="180" width="5" height="5" rx="1" fill="#648d82" transform="rotate(49 252 182)" />
+                            <rect x="230" y="-210" width="7" height="7" rx="1" fill="#d8a45c" transform="rotate(76 233 -206)" />
                         </g>
                     </svg>
                 </div>
