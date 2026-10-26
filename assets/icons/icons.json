@@ -1,0 +1,12 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "logogg.jpg"
+ },
+ "source_md5": "62107c50e7c19c496cb467bf9c0d4129",
+ "version": "238ffff3",
+ "tile": "#ffffff",
+ "crop": null,
+ "header": null,
+ "made": "2026-10-26"
+}

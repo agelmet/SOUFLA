@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index.backup
+
+Sitemap: https://anthiasoufla.gr/sitemap.xml
